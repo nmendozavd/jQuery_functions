@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+  $(document).ready(function(){
+
+    $('h1' ).click(function() {
+      alert( "You got it buddy!" );
+    });
+
+    $( "#hide" ).click(function() {
+  $( "#ninja" ).hide( "slow", function() {
+    });
+  });
+    $( "#show" ).click(function() {
+      $( "#ninja" ).show( "slow", function() {
+      });
+    });
+    $( "#toggle" ).click(function() {
+  $( "#ninja" ).toggle();
+});
+
+$( "#button1" ).click(function() {
+  $( "#globe" ).slideDown( "slow", function() {
+  });
+});
+
+$( "#button2"  ).click(function() {
+  $( "#globe" ).slideUp( "slow", function() {
+  });
+});
+
+
+$( "#slidebutton" ).click(function() {
+  $( "#ninja1" ).slideToggle( "slow", function() {
+  });
+});
+
+$( "#fadein" ).click(function() {
+  $( "h2" ).fadeIn( "slow" );
+
+});
+
+$( "#fadeout" ).click(function() {
+  $( "h2" ).fadeOut( "slow" );
+
+});
+
+$( "h1:last" ).addClass( "header" );
+
+
+$( "h1" ).before( "<b>Before Example</b>" );
+
+$( "h1" ).after( "<b>After Example</b>" );
+
+$( "p" ).append( $( "Append" ) );
+
+$( "h3" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
+
+var title = $( "em" ).attr( "title" );
+$( "div" ).text( title );
+
+
+$( "input" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  })
+  .keyup();
+
+  var str = $( "p:first" ).text();
+  $( "p:last" ).html( str );
+
+  $( "div" ).data( "test", { first: 16, last: "pizza!" } );
+  $( "span:first" ).text( $( "div" ).data( "test" ).first );
+  $( "span:last" ).text( $( "div" ).data( "test" ).last );
+
+});
+
+  </script>
+</head>
+<body>
+  <h1 class="header">
+    JQuery Function Website
+  </h1>
+
+  <h1>
+    JQuery Function Website
+  </h1>
+
+  <h1>
+    JQuery Function Website
+  </h1>
+
+  <style>
+    h1 {
+      margin: 8px;
+      font-size: 28px;
+    }
+    .header {
+      color: blue;
+    }
+    </style>
+
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <br>
+  <img id="ninja" src="file:///Users/noelmendoza/Desktop/DojoAssignments/WebFundamentals/HTML/Images/ninja.png" alt="" width="100" height="123">
+  <br>
+
+  <button id= "toggle">Toggle</button>
+  <br>
+
+
+  <img id="globe" src="file:///Users/noelmendoza/Desktop/DojoAssignments/WebFundamentals/HTML/Images/globe.png" alt="" width="100" height="123">
+  <br>
+  <button id= "button2"> Slide Up </button>
+  <button id= "button1"> Slide Down </button>
+  <br>
+
+  <img id="ninja1" src="file:///Users/noelmendoza/Desktop/DojoAssignments/WebFundamentals/HTML/Images/ninja.png" alt="" width="100" height="123">
+  <br>
+
+  <button id= "slidebutton">Slide Toggle</button>
+  <br>
+
+
+  <h2>Click Buttons Below for Example of Fade</h2>
+  <button id= "fadein">Fade In</button>
+  <button id= "fadeout">Fade Out</button>
+  <br>
+
+  <Append> <b> Adding it to end of text </b> </append>
+  <p> I am doing the example for Append here: </p>
+  <br>
+
+  <h3>
+      <b>Click</b> to change the <span id="tag">html</span>
+    </h3>
+    <h3>
+      to a <span id="text">text</span> node.
+    </h3>
+    <h3>
+      This <button name="nada">button</button> does nothing.
+    </h3>
+<br>
+
+    <style>
+  em {
+    color: blue;
+    font-weight: bold;
+  }
+  div {
+    color: red;
+  }
+  </style>
+
+  <p>Once there was a <em title="huge, gigantic">large</em> dinosaur...</p>
+
+The title of the emphasis is:<div></div>
+
+<br>
+<style>
+p {
+    color: blue;
+    margin: 8px;
+  }
+  </style>
+<input type="text" value="some text">
+<p></p>
+
+<style>
+h5 {
+   color: blue;
+   margin: 8px;
+ }
+ b {
+   color: red;
+ }
+ </style>
+
+<head>
+<body>
+
+<h5><b>Test</b> Paragraph.</h5>
+<h5></h5>
+
+</style>
+
+
+<div>
+  The values stored were
+  <span></span>
+  and
+  <span></span>
+</div>
+
+</body>
+</html>
